@@ -12,6 +12,13 @@ const PORT = process.env.PORT || 3000;
 app.use(cors());
 app.use(express.json());
 
+// --- RUTAS DE LA API ---
+// ESTA ES LA LÍNEA NUEVA QUE NECESITAS AGREGAR:
+app.use('/api/events', require('./routes/eventRoutes'));
+
+// (Futuras rutas)
+// app.use('/api/users', require('./routes/userRoutes'));
+
 // --- FUNCIÓN DE INICIO ---
 const startServer = async () => {
   try {
@@ -40,5 +47,3 @@ startServer();
 app.get('/', (req, res) => {
   res.send('API de ConectaVoluntarios funcionando 🚀');
 });
-
-// app.use('/api/users', require('./routes/userRoutes'));

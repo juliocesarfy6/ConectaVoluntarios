@@ -42,8 +42,9 @@ const Event = sequelize.define('Event', {
   image_url: DataTypes.STRING(255)
 }, {
   tableName: 'events',
-  timestamps: true,
-  underscored: true
+  timestamps: true,      // Mantenemos timestamps activado para created_at
+  underscored: true,     // Convierte camelCase a snake_case automáticamente
+  updatedAt: false       // <--- ESTA LÍNEA SOLUCIONA TU ERROR (Desactiva la búsqueda de updated_at)
 });
 
 module.exports = Event;
