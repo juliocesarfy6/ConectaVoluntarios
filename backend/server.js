@@ -15,6 +15,7 @@ app.use(express.json());
 // --- RUTAS DE LA API ---
 // ESTA ES LA LÍNEA NUEVA QUE NECESITAS AGREGAR:
 app.use('/api/events', require('./routes/eventRoutes'));
+app.use('/api/auth', require('./routes/authRoutes'));
 
 // (Futuras rutas)
 // app.use('/api/users', require('./routes/userRoutes'));
