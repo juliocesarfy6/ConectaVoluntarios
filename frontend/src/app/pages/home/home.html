@@ -1,11 +1,8 @@
 <div class="bg-white min-h-screen font-sans text-gray-800">
-  
-  <!-- 1. NAVBAR SUPERIOR -->
+  <app-header></app-header>
   <app-navbar></app-navbar>
 
-  <!-- 2. HERO SECTION -->
   <header class="relative overflow-hidden pt-12 pb-20 lg:pt-20 lg:pb-28 bg-white">
-    <!-- Decoración de fondo suave -->
     <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-teal-50 rounded-full blur-3xl opacity-50"></div>
     
     <div class="container mx-auto px-6 relative z-10">
@@ -37,7 +34,7 @@
             </a>
           </div>
 
-          <!-- Estadísticas Rápidas -->
+          <!-- Estadísticas -->
           <div class="grid grid-cols-3 gap-8 pt-8 border-t border-gray-100 mt-8">
             <div>
               <p class="text-3xl font-bold text-gray-900">1,247</p>
@@ -57,9 +54,7 @@
         <!-- Imagen Hero -->
         <div class="lg:w-1/2 relative w-full">
           <div class="bg-gray-100 rounded-3xl overflow-hidden shadow-2xl relative aspect-[4/3] group">
-            <!-- Capa decorativa -->
             <div class="absolute inset-0 bg-gradient-to-tr from-teal-600/20 to-transparent z-10"></div>
-            <!-- Imagen placeholder robusto -->
             <div class="absolute inset-0 flex items-center justify-center bg-gray-200 text-gray-400">
                <div class="text-center">
                   <span class="text-6xl">🙌</span>
@@ -67,10 +62,8 @@
                </div>
             </div>
             
-            <!-- Tarjeta Flotante "Impacto Real" -->
             <div class="absolute bottom-8 left-8 bg-teal-600 text-white p-4 rounded-xl shadow-lg z-20 flex items-center gap-3 animate-bounce">
                <div class="p-2 bg-white/20 rounded-lg">
-                  <!-- Icono medalla -->
                   <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                </div>
                <div>
@@ -80,60 +73,11 @@
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </header>
 
-  <!-- 3. SECCIÓN ROLES: "Diseñado para todos" -->
-  <section class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Diseñado para todos</h2>
-        <p class="text-gray-600">Una plataforma modular que se adapta a las diferentes necesidades del ecosistema social.</p>
-      </div>
-
-      <div class="grid md:grid-cols-3 gap-8">
-        <!-- Card Voluntarios -->
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-teal-50 text-teal-600 rounded-xl flex items-center justify-center mb-6">
-            <!-- Icono User -->
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Voluntarios</h3>
-          <p class="text-gray-500 leading-relaxed text-sm">
-            Busca eventos, inscríbete y gestiona tu historial de participación de forma sencilla y rápida.
-          </p>
-        </div>
-
-        <!-- Card Organizaciones -->
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-orange-50 text-orange-600 rounded-xl flex items-center justify-center mb-6">
-            <!-- Icono Corazón -->
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Organizaciones</h3>
-          <p class="text-gray-500 leading-relaxed text-sm">
-            Publica eventos, administra voluntarios inscritos y valida horas de servicio con herramientas dedicadas.
-          </p>
-        </div>
-
-        <!-- Card Instituciones -->
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow">
-          <div class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center mb-6">
-            <!-- Icono Gráfica -->
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">Instituciones Educativas</h3>
-          <p class="text-gray-500 leading-relaxed text-sm">
-            Asigna servicio social, monitorea el progreso de estudiantes y genera reportes académicos automáticos.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. SECCIÓN CÓMO FUNCIONA -->
+  <!-- 3. SECCIÓN CÓMO FUNCIONA -->
   <section class="py-20 bg-white">
     <div class="container mx-auto px-6">
       <div class="text-center mb-16">
@@ -161,70 +105,48 @@
     </div>
   </section>
 
-  <!-- 5. SECCIÓN EVENTOS (Integrada con MySQL) -->
-  <section id="eventos" class="py-20 bg-gray-50">
+  <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-6">
-      <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-4">
-         <div>
-           <h2 class="text-3xl font-bold text-gray-900">Explora Eventos Reales</h2>
-           <p class="text-gray-600 mt-2">Estos eventos provienen directamente de tu base de datos</p>
-         </div>
-         <a routerLink="/login" class="text-teal-600 font-bold hover:underline">Ver todos los eventos →</a>
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Diseñado para todos</h2>
+        <p class="text-gray-600">Una plataforma modular que se adapta a las diferentes necesidades del ecosistema social.</p>
       </div>
 
-      <!-- Loading State -->
-      <div *ngIf="loading()" class="py-12 text-center">
-         <div class="w-12 h-12 border-4 border-teal-200 border-t-teal-600 rounded-full animate-spin mx-auto mb-4"></div>
-         <p class="text-gray-400 font-medium">Cargando eventos...</p>
-      </div>
-
-      <!-- Grid de Eventos -->
-      <div *ngIf="!loading()" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div *ngFor="let event of events()" class="bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden hover:shadow-lg transition-all group">
-           <!-- Imagen del Evento (Placeholder) -->
-           <div class="h-48 bg-gray-200 relative overflow-hidden flex items-center justify-center text-gray-400 font-bold text-2xl">
-             {{ event.title.charAt(0) }}
-             <div class="absolute top-4 right-4 bg-white/90 backdrop-blur text-teal-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider shadow-sm">
-               {{ event.category }}
-             </div>
-           </div>
-           
-           <div class="p-6">
-             <h3 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-teal-600 transition-colors">{{ event.title }}</h3>
-             <p class="text-gray-500 text-sm line-clamp-2 mb-4">{{ event.description }}</p>
-             
-             <div class="space-y-2 text-sm text-gray-600">
-                <div class="flex items-center gap-2">
-                  <span>📅</span> {{ event.event_date }} • {{ event.event_time }}
-                </div>
-                <div class="flex items-center gap-2">
-                  <span>📍</span> {{ event.location }}
-                </div>
-             </div>
-           </div>
-           
-           <div class="px-6 py-4 border-t border-gray-50 bg-gray-50/50 flex justify-between items-center">
-              <span class="text-xs font-bold text-gray-500 uppercase tracking-wide">
-                Org: <span class="text-gray-800">{{ event.organizer.full_name }}</span>
-              </span>
-              <a routerLink="/login" class="text-teal-600 font-bold text-sm hover:text-teal-800 cursor-pointer">Detalles →</a>
-           </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Voluntarios -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow text-center">
+          <div class="w-14 h-14 bg-teal-50 text-teal-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Voluntarios</h3>
+          <p class="text-gray-500 text-sm">Busca eventos, inscríbete y gestiona tu historial de participación.</p>
+        </div>
+        <!-- Organizaciones -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow text-center">
+          <div class="w-14 h-14 bg-orange-50 text-orange-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Organizaciones</h3>
+          <p class="text-gray-500 text-sm">Publica eventos y administra voluntarios inscritos fácilmente.</p>
+        </div>
+        <!-- Instituciones -->
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow text-center">
+          <div class="w-14 h-14 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6 mx-auto">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">Instituciones</h3>
+          <p class="text-gray-500 text-sm">Asigna servicio social y genera reportes académicos.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 6. SECCIÓN CTA FINAL (Banner Teal) -->
+  <!-- 5. CTA FINAL -->
   <section class="py-20 bg-teal-600 text-white relative overflow-hidden">
-    <!-- Decoración de fondo -->
-    <div class="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-teal-500 rounded-full opacity-50 blur-3xl"></div>
-    <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-teal-700 rounded-full opacity-50 blur-3xl"></div>
-
     <div class="container mx-auto px-6 text-center relative z-10">
       <h2 class="text-3xl md:text-5xl font-bold mb-6">¿Listo para hacer la diferencia?</h2>
       <p class="text-teal-100 text-lg mb-10 max-w-2xl mx-auto">
         Únete a miles de voluntarios que ya están generando un impacto positivo. 
-        Es gratis y toma menos de 2 minutos.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
         <button class="px-8 py-4 bg-orange-400 hover:bg-orange-500 text-white font-bold rounded-lg shadow-lg transition-colors cursor-pointer">
@@ -243,7 +165,7 @@
        <div class="flex items-center gap-2 font-bold text-xl">
           <span class="text-teal-500">♥</span> ConectaVoluntarios
        </div>
-       <p class="text-gray-400 text-sm">© 2025 ConectaVoluntarios. Plataforma modular de gestión.</p>
+       <p class="text-gray-400 text-sm">© 2025 ConectaVoluntarios.</p>
     </div>
   </footer>
 

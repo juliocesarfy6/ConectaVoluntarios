@@ -66,7 +66,7 @@ export class LoginComponent {
     this.authService.login({ email: this.email, password: this.password }).subscribe({
       next: () => {
         // Si el login es correcto, ir al Dashboard (o Home por ahora)
-        this.router.navigate(['/']);
+        this.router.navigate(['/feed']);
       },
       error: (err) => {
         this.errorMessage = err.error.msg || 'Error al iniciar sesión';

@@ -1,14 +1,14 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterLink } from '@angular/router'; // Necesario para el Sidebar
+import { FormsModule } from '@angular/forms';
 import { EventService, Evento } from '../../services/event.service';
 import { AuthService } from '../../services/auth.service';
-import { FormsModule } from '@angular/forms'; // Para la barra de búsqueda
+import { SidebarComponent } from '../../shared/sidebar/sidebar';
 
 @Component({
   selector: 'app-events-feed',
   standalone: true,
-  imports: [CommonModule, RouterLink, FormsModule], // Quitamos NavbarComponent, agregamos RouterLink
+  imports: [CommonModule, FormsModule, SidebarComponent], 
   templateUrl: './feed.html',
 })
 export class EventsFeedComponent implements OnInit {
@@ -17,7 +17,7 @@ export class EventsFeedComponent implements OnInit {
   
   events = signal<Evento[]>([]);
   loading = signal<boolean>(true);
-  searchTerm = signal<string>(''); // Para el buscador
+  searchTerm = signal<string>('');
 
   ngOnInit() {
     this.eventService.getEvents().subscribe({
@@ -32,12 +32,10 @@ export class EventsFeedComponent implements OnInit {
     });
   }
 
-  // Getter para filtrar eventos por texto
   get filteredEvents() {
     const term = this.searchTerm().toLowerCase();
     return this.events().filter(e => 
       e.title.toLowerCase().includes(term) || 
-      e.description.toLowerCase().includes(term) ||
       e.organizer?.full_name.toLowerCase().includes(term)
     );
   }
