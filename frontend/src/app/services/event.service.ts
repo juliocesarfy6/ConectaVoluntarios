@@ -12,6 +12,7 @@ export interface Evento {
   event_time: string;
   location: string;
   max_volunteers: number;
+  image_url: string;
   organizer: {
     full_name: string;
   };
